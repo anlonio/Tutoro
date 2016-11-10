@@ -15,3 +15,13 @@ class Instituicao(models.Model):
 	uf = models.CharField(max_length=2)
 	sigla = models.CharField(max_length=10)
 	descricao = models.TextField(max_length=255)
+
+class Duvida(models.Model):
+	titulo = models.CharField(max_length=250)
+	texto = models.TextField(max_length=1000)
+	imagem = models.ImageField(upload_to='duvida/%Y/%m/%d/')
+	audio = models.FileField(upload_to='duvida/%Y/%m/%d/')
+	video = models.FileField(upload_to='duvida/%Y/%m/%d/')
+	like = models.ManyToManyField(User)
+	deslike = models.ManyToManyField(User)
+	disciplina = models.ForeignKey(Disciplina, on_delete=models.SET_NULL , null=True)
