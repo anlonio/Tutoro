@@ -9,7 +9,7 @@ class Disciplina(models.Model):
 	sigla = models.CharField(max_length=10)
 
 class Instituicao(models.Model):
-	professsor = models.ManyToMany(User)
+	professsor = models.ManyToManyField(User)
 	nome = models.CharField(max_length=150)
 	cidade = models.CharField(max_length=100)
 	uf = models.CharField(max_length=2, min_length=4)
