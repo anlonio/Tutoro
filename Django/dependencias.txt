@@ -1,3 +1,5 @@
 Django==1.10
 djangorestframework==3.5.3
+Pillow==3.4.2
+psycopg2==2.6.2
 virtualenv==15.0.3
