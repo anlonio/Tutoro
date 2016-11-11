@@ -36,11 +36,12 @@ class Duvida(models.Model):
 	like = models.ManyToManyField(User, related_name='like', blank=True)
 	deslike = models.ManyToManyField(User, related_name='deslike', blank=True)
 	disciplina = models.ForeignKey(Disciplina, on_delete=models.SET_NULL , null=True)
-	date_create = models.DateTimeField(default=timezone.now)
+	date_create = models.DateTimeField(default=timezone.now())
 	last_update = models.DateTimeField(blank=True, null=True)
 
-	def update(self):
-		self.last_update = timezone.now
+	def save(self):
+		self.last_update = timezone.now()
+		super(Duvida, self).save()
 
 	def __str__(self):
 		return self.date_create.strftime("[%d/%m/%Y] ") + self.autor.username + ": " + self.titulo[:40] + "..."
