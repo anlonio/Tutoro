@@ -6,7 +6,7 @@ from core.models import Duvida
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'groups')
+        fields = ('url', 'username', 'email', 'password', 'first_name', 'last_name')
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
