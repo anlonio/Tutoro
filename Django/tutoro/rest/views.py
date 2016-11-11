@@ -20,18 +20,21 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 
-class DuvidaList(generics.ListAPIView):
+class DuvidaListOpen(generics.ListAPIView):
     serializer_class = DuvidaSerializer
 
     def get_queryset(self):
         """
-        This view should return a list of all the purchases
-        for the currently authenticated user.
+        This view should return a list of all the purchases for
+        the user as determined by the username portion of the URL.
         """
-        duvida = self.request.duvida
-        return Purchase.objects.filter(autor=user)
+        is_open = self.kwargs['isOpen']
+        if is_open == 0:
+        	return Duvida.objects.filter(respondida=False)
+        else:
+        	return Duvida.objects.filter(respondida=True)
 
-class PurchaseList(generics.ListAPIView):
+class DuvidaListUser(generics.ListAPIView):
     serializer_class = DuvidaSerializer
 
     def get_queryset(self):
