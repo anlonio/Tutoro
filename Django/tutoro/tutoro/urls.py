@@ -25,6 +25,7 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'duvidas', views.DuvidaViewSet)
+router.register(r'comentario', views.ComentarioViewSet)
 
 
 urlpatterns = [
@@ -32,4 +33,5 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^api-token-auth/', token_views.obtain_auth_token),
+    url('^purchases/(?P<username>.+)/$', views.PurchaseList.as_view()),
 ]
