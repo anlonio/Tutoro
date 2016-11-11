@@ -1,0 +1,94 @@
+#logo-tutoro{
+	background-image: url('../img/logotipo.png');
+	background-repeat: no-repeat;
+	min-width: 150px;
+	min-height: 175px;
+	padding: 0;
+}
+
+#logo-tutoro-content{
+	background-image: url('../img/logo-nome.png');
+	background-repeat: no-repeat;
+	min-width: 200px;
+	min-height: 55px;
+	padding: 0;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (max-device-width: 415px) {
+  #space-menu {
+	padding-left: 20px;
+  }
+  .espacamento-content {
+    padding-top: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  #space-menu {
+	padding-left: 20px;
+  }
+  .espacamento-content {
+    padding-top: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  #space-menu {
+	padding-left: 20px;
+  }
+  .espacamento-content {
+    padding-top: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  #space-menu {
+	padding-left: 40px;
+  }
+  .espacamento-content {
+    padding-top: 90px;
+  }
+}
+
+.center {
+	margin: 0 auto;
+	width: 150px;
+}
+
+.center-form {
+	margin: 0 auto;
+	width: 300px;
+}
+
+.center-duvida {
+	text-align: center;
+}
+
+.box-titulo {
+	min-height: 45px;
+	padding: 15px;
+}
+
+.font-titulo-duvida {
+	font-family: 'Century Gothic', 'Sans Serif';
+	font-size: 20pt;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-voltar {
+	margin: 0 auto;
+}

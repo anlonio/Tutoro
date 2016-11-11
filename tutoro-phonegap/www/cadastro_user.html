@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Cadastro de Usuário</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.green-red.min.css" />
+    <link rel="stylesheet" href="css/tutoro.css">
+    <link rel="stylesheet" href="css/styles_duvida.css">
+    <style>
+        #view-source {
+            position: fixed;
+            display: block;
+            right: 0;
+            bottom: 0;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            z-index: 900;
+        }
+        .demo-card-square.mdl-card {
+            width: 320px;
+            height: 320px;
+        }
+        .demo-card-square > .mdl-card__title {
+            color: #fff;
+            background:
+            url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+        }
+    </style>
+</head>
+
+<body class="mdl-color--green-100">
+     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+        <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+            <div class="mdl-layout__header-row">
+                <div id="logo-tutoro-content"></div>
+                <div class="android-header-spacer mdl-layout-spacer"></div>
+                <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+                    <li class="mdl-menu__item">SOBRE</li>
+                    <li class="mdl-menu__item">AJUDA</li>
+                </ul>
+            </div>
+        </div>
+        <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          <img class="android-logo-image" src="images/android-logo-white.png">
+        </span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Phones</a>
+          <a class="mdl-navigation__link" href="">Tablets</a>
+          <a class="mdl-navigation__link" href="">Wear</a>
+        </nav>
+      
+    </div>
+
+    <main class="mdl-layout__content">
+      <h3 class="center-duvida">Cadastro de Usuário</h3>
+      <form action="#" class="center-form">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="nome">
+            <label class="mdl-textfield__label" for="sample3">Nome</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sobrenome">
+            <label class="mdl-textfield__label" for="sample3">Sobrenome</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="login">
+            <label class="mdl-textfield__label" for="sample3">Login</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="password" id="senha">
+            <label class="mdl-textfield__label" for="sample3">Senha...</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="email">
+            <label class="mdl-textfield__label" for="sample3">E-mail</label>
+        </div>
+
+        <div class="mdl-menu--bottom">
+          <button id="cadastrar" class=" mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--green mdl-color-text center-form">Cadastrar</button>
+        </div>
+      </form>
+    </main>
+
+    <div class="mdl-layout__obfuscator"></div>
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.simplyCountable.js"></script>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <!-- </div> -->
+</body>
+
+    <script>
+        Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+            var link = el.querySelector('a');
+            if(!link) {
+                return;
+            }
+            var target = link.getAttribute('href');
+            if(!target) {
+                return;
+            }
+            el.addEventListener('click', function() {
+                location.href = target;
+            });
+        });
+
+        document.addEventListener('deviceready', onDeviceReady, false);
+        
+        $(document).ready(function () {
+          onDeviceReady();
+        });
+        
+        function onDeviceReady() {
+          $('#cadastrar').click(function() {
+             validarCamposCadastro();
+
+          });
+        }
+        
+        function validarCamposCadastro() {
+          var nome = $('#nome').val();
+          var sobrenome = $('#sobrenome').val();
+          var login = $('#login').val();
+          var senha = $('#senha').val();
+          var email = $('#email').val();
+
+          //var pbkdf2 = require('pbkdf2-sha256');
+
+          //var key = senha;
+          //var salt = 'salt';
+          //var password = pbkdf2(key, salt, 1, 64);
+          //var passwordCriptografada = res.toString();
+
+          if (nome == '' || sobrenome == '' || email == '' || login == '' || senha == '') {
+            alert('Por favor preencha todos os campos!', 'Alerta!');
+          } else {
+            $.ajax({
+                type: "POST",
+                url: "http://192.168.0.104:8000/rest-auth/registration/",
+                data: {username: login, password1: senha, password2: senha, email: email},
+                success: function(result){
+                    //alert(JSON.stringify(result));
+                    window.location.href = "index.html";
+                    //alert(JSON.stringify(result));
+                },
+                error: function(r, status, e){
+                   // alert(e);
+                }
+            });
+          }
+        }
+
+    </script>
+</html>
