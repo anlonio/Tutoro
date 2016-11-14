@@ -1,0 +1,42 @@
+.logo-static{
+	height: 180px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.expotec-log{
+	max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.ifrn-log{
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+.celular_1{
+	max-height: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+.text-center{
+ 	text-align: center;
+}
+.redondo img {
+    width: 200px;
+    height: 200px;
+    color: #FFF;
+    background-color: #000;
+    border-radius: 50%;
+}
+#centralize{
+	/*display: table;*/
+	display: flex;
+	justify-content: center;
+}
+strong{
+	align-self: center;
+	font-size: larger;
+	/*display: table-cell;
+	vertical-align: middle;*/
+}
