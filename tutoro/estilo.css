@@ -33,10 +33,11 @@
 	/*display: table;*/
 	display: flex;
 	justify-content: center;
+	text-align: center;
 }
 strong{
 	align-self: center;
-	font-size: larger;
+	font-size: x-large;
 	/*display: table-cell;
 	vertical-align: middle;*/
 }
