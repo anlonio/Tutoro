@@ -266,8 +266,8 @@
           } else {
             $.ajax({
                 type: "POST",
-                url: "https://tutoro.herokuapp.com/users/",
-                data: {texto: duvida, imagem: foto, assunto: assunto, disciplina: disciplina},
+                url: "https://tutoro.herokuapp.com/duvidas/",
+                data: {texto: duvida, imagem: null, assunto: assunto, disciplina: disciplina},
                 success: function(result){
                     //alert(JSON.stringify(result));
                     window.location.href = "index_duvida.html";
