@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <title>Android</title>
+
+        <!-- Page styles -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.min.css">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.teal-red.min.css" />
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/tutoro.css">
+        <style>
+        #view-source {
+            position: fixed;
+            display: block;
+            right: 0;
+            bottom: 0;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            z-index: 900;
+        }
+        </style>
+    </head>
+
+    <body class="mdl-color--green-100">
+    
+    <!-- conteúdo -->
+    <div class="espacamento-content"></div>
+    <div class="row">
+        <div class="container">
+
+            <div class="center">
+                <div id="logo-tutoro"></div>
+            </div>
+
+            <div class="center-form">
+                <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="login">
+                            <label class="mdl-textfield__label" for="sample3">Login...</label>
+                        </div>
+
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="password" id="password">
+                            <label class="mdl-textfield__label" for="sample3">Senha...</label>
+                        </div>
+                        <div class="mdl-menu--bottom">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"  id='logar'>Entrar</button>
+                            <a href="cadastro_user.html">
+                                Cadastrar
+                            </a>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <!-- animação labels login -->
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.simplyCountable.js"></script>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script type="text/javascript">
+
+        document.addEventListener('deviceready', onDeviceReady, false);
+       
+        function onDeviceReady() {
+          $('#logar').click(function() {
+             logar();
+          });
+        }
+
+        function logar() {
+          var login = $('#login').val();
+          var senha = $('#password').val();
+
+          if (login == '' || senha == '') {
+            alert('Por favor preencha todos os campos!', 'Alerta!');
+          } else {
+            $.ajax({
+                type: "POST",
+                url: "http://192.168.0.104:8000/rest-auth/login/",
+                data: {username: login, password: senha, email: null},
+                success: function(result){
+                    window.location.href = "index_duvida.html";
+                    localStorage.setItem('token',result.data['token']);
+                    //JSON.stringify(result);
+                },
+                error: function(r, status, e){
+                    alert(e);
+                }
+            });
+          }
+        }
+    
+
+    </script>
+    </body>
+</html>
