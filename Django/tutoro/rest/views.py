@@ -66,13 +66,6 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
 
-class GroupViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited.
-    """
-    queryset = Group.objects.all()
-    serializer_class = GroupSerializer
-
 class DuvidaViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
@@ -93,9 +86,3 @@ class DuvidaListView(generics.ListAPIView):
     serializer_class = DuvidaSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
 """
-
-# Create your models here.
-@receiver(post_save, sender=settings.AUTH_USER_MODEL)
-def create_auth_token(sender, instance=None, created=False, **kwargs):
-    if created:
-        Token.objects.create(user=instance)

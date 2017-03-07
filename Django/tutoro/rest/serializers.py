@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User
 from rest_framework import serializers
 from core.models import Duvida, Comentario
 
@@ -8,11 +8,6 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ('url', 'username', 'email', 'password', 'first_name', 'last_name')
 
-
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ('url', 'name')
 
 class DuvidaSerializer(serializers.HyperlinkedModelSerializer):
     disciplina = serializers.StringRelatedField(many=False)

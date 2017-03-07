@@ -86,7 +86,6 @@
 
     <main class="mdl-layout__content">
       <h3 class="center-duvida">Cadastro de Usuário</h3>
-      <form action="#" class="center-form">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="text" id="nome">
             <label class="mdl-textfield__label" for="sample3">Nome</label>
@@ -111,7 +110,6 @@
         <div class="mdl-menu--bottom">
           <button id="cadastrar" class=" mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--green mdl-color-text center-form">Cadastrar</button>
         </div>
-      </form>
     </main>
 
     <div class="mdl-layout__obfuscator"></div>
@@ -170,7 +168,7 @@
           } else {
             $.ajax({
                 type: "POST",
-                url: "http://192.168.0.104:8000/rest-auth/registration/",
+                url: "http://www.tutoro.herokuapp.com/rest-auth/registration/",
                 data: {username: login, password1: senha, password2: senha, email: email},
                 success: function(result){
                     //alert(JSON.stringify(result));
@@ -178,7 +176,7 @@
                     //alert(JSON.stringify(result));
                 },
                 error: function(r, status, e){
-                   // alert(e);
+                   alert(e);
                 }
             });
           }
