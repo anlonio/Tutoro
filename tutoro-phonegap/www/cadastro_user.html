@@ -170,7 +170,7 @@
           } else {
             $.ajax({
                 type: "POST",
-                url: "http://192.168.0.104:8000/rest-auth/registration/",
+                url: "http://www.tutoro.herokuapp.com/rest-auth/registration/",
                 data: {username: login, password1: senha, password2: senha, email: email},
                 success: function(result){
                     //alert(JSON.stringify(result));

@@ -84,7 +84,7 @@
           } else {
             $.ajax({
                 type: "POST",
-                url: "http://192.168.0.104:8000/rest-auth/login/",
+                url: "http://www.tutoro.herokuapp.com/rest-auth/login/",
                 data: {username: login, password: senha, email: null},
                 success: function(result){
                     window.location.href = "index_duvida.html";
