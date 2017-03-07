@@ -82,7 +82,7 @@
           } else {
             $.ajax({
                 type: "POST",
-                url: "http://www.tutoro.herokuapp.com/rest-auth/login/",
+                url: "https://tutoro.herokuapp.com/rest-auth/login/",
                 data: {username: login, password: senha, email: null},
                 success: function(result){
                     window.location.href = "index_duvida.html";
